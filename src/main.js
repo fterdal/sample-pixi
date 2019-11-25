@@ -30,3 +30,11 @@ app.loader.add("bunny", "bunny.png").load((loader, resources) => {
     bunny.rotation += 0.01
   })
 })
+
+// function update() {
+//   requestAnimationFrame(() => {
+//     console.log('hello')
+//     requestAnimationFrame(update)
+//   })
+// }
+// update()
