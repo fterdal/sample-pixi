@@ -1,9 +1,6 @@
-import * as PIXI from "pixi.js"
+/* globals PIXI */
 
-let app = new PIXI.Application({
-  backgroundColor: 0xf0f0f0
-})
-
+let app = new PIXI.Application()
 //Add the canvas that Pixi automatically created for you to the HTML document
 document.body.appendChild(app.view)
 
@@ -24,17 +21,11 @@ app.loader.add("bunny", "bunny.png").load((loader, resources) => {
   // console.log(app.stage.addChild.toString())
   app.stage.addChild(bunny)
 
+  console.log(app.stage.children)
+
   // Listen for frame updates
   app.ticker.add(() => {
     // each frame we spin the bunny around a bit
     bunny.rotation += 0.01
   })
 })
-
-// function update() {
-//   requestAnimationFrame(() => {
-//     console.log('hello')
-//     requestAnimationFrame(update)
-//   })
-// }
-// update()
