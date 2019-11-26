@@ -1,11 +1,15 @@
 /* globals PIXI */
+import * as PIXI from 'pixi.js'
+
+import bunny from './images/bunny.png'
+console.log(bunny)
 
 let app = new PIXI.Application()
 //Add the canvas that Pixi automatically created for you to the HTML document
 document.body.appendChild(app.view)
 
 // load the texture we need
-app.loader.add("bunny", "bunny.png").load((loader, resources) => {
+app.loader.add("bunny", bunny).load((loader, resources) => {
   // This creates a texture from a 'bunny.png' image
 
   const bunny = new PIXI.Sprite(resources.bunny.texture)
